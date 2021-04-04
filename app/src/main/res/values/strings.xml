@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Learn IO</string>
+    <string name="mainActivityTitle">Create An Account</string>
+    <string name="accountInformationActivityTitle">
+        Account Information
+    </string>
+    <string name="chooseImage">Click To Choose An Image</string>
+    <string name="firstNameHint">e.g. Osid</string>
+    <string name="lastNameHint">e.g. Abu-Alrub</string>
+    <string name="firstNameTxtView">First Name:</string>
+    <string name="lastNameTxtView">Last Name:</string>
+    <string name="learnSubjectSpinner">Wanted Skill:</string>
+    <string name="inputFieldOther">e.g. Swimming</string>
+    <string name="otherTxtView">Custom Skill:</string>
+    <string name="btnTxtCreate">Create</string>
+    <string name="emailHint">e.g. abualrub.osid@gmail.com</string>
+    <string name="emailTxtView">Email:</string>
+    <string name="genderTxtView">Gender</string>
+    <string name="maleRadioBtn">Male</string>
+    <string name="femaleRadioBtn">Female</string>
+    <string name="newsletter">Subscribe to newsletter</string>
+</resources>

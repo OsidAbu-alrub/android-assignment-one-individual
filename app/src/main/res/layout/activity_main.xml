@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_theme_primary"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--TOOLBAR-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/LightThemeToolbarTitle"
+            android:text="@string/mainActivityTitle" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--IMAGE-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/unifiedPadding"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:onClick="onClickBrowse">
+
+                <TextView
+                    android:id="@+id/chooseImageTxtView"
+                    style="@style/txtView"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/light_theme_secondary"
+                    android:gravity="center"
+                    android:text="@string/chooseImage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/round_c"
+                    android:visibility="gone" />
+
+                <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                    android:id="@+id/imgView"-->
+                <!--                    android:layout_width="350px"-->
+                <!--                    android:layout_height="350px"-->
+                <!--                    android:layout_gravity="center_vertical"-->
+                <!--                    android:background="@drawable/round_c"-->
+                <!--                    app:srcCompat="@android:drawable/ic_menu_gallery" />-->
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--FIRST NAME-->
+            <androidx.appcompat.widget.LinearLayoutCompat style="@style/layouts">
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/firstNameTxtView" />
+                <EditText
+                    android:id="@+id/inputFieldFirstName"
+                    style="@style/inputField"
+                    android:hint="@string/firstNameHint"
+                    android:inputType="textPersonName" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--LAST NAME-->
+            <androidx.appcompat.widget.LinearLayoutCompat style="@style/layouts">
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/lastNameTxtView" />
+                <EditText
+                    android:id="@+id/inputFieldLastName"
+                    style="@style/inputField"
+                    android:hint="@string/lastNameHint"
+                    android:inputType="textPersonName" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--GENDER-->
+            <androidx.appcompat.widget.LinearLayoutCompat style="@style/layouts">
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/genderTxtView" />
+                <RadioGroup
+                    android:id="@+id/genderRadioGrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/male"
+                        android:text="@string/maleRadioBtn"
+                        style="@style/radioBtn" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/female"
+                        android:text="@string/femaleRadioBtn"
+                        style="@style/radioBtn"/>
+                </RadioGroup>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--EMAIL-->
+            <androidx.appcompat.widget.LinearLayoutCompat style="@style/layouts">
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/emailTxtView" />
+                <EditText
+                    android:id="@+id/inputFieldEmail"
+                    style="@style/inputField"
+                    android:hint="@string/emailHint"
+                    android:inputType="textEmailAddress" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--SKILL SPINNER-->
+            <androidx.appcompat.widget.LinearLayoutCompat style="@style/layouts">
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/learnSubjectSpinner" />
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/inputField" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--CUSTOM SKILL-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/customSkillLayout"
+                style="@style/layouts"
+                android:visibility="gone">
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/otherTxtView" />
+                <EditText
+                    android:id="@+id/inputFieldCustom"
+                    style="@style/inputField"
+                    android:hint="@string/inputFieldOther"
+                    android:inputType="textPersonName" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--NEWSLETTER-->
+            <androidx.appcompat.widget.LinearLayoutCompat style="@style/layouts">
+                <CheckBox
+                    android:id="@+id/newsSettlerCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/newsletter"
+                    style="@style/radioBtn"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--SUBMIT BUTTON-->
+            <Button
+                style="@style/btnLightTheme"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:onClick="onClickCreate"
+                android:text="@string/btnTxtCreate" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
